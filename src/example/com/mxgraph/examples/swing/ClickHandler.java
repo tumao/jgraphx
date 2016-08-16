@@ -43,6 +43,8 @@ public class ClickHandler extends JFrame
 		final mxGraphComponent graphComponent = new mxGraphComponent(graph);
 		BasicGraphEditor editor = new BasicGraphEditor("editor title", graphComponent);
 		EditorToolBar toolbar = new EditorToolBar(editor, 1);
+		Container pane  = this.getContentPane();
+		pane.add(toolbar, BorderLayout.NORTH);
 		
 		getContentPane().add(graphComponent);
 		
@@ -65,11 +67,11 @@ public class ClickHandler extends JFrame
 	{
 		ClickHandler frame = new ClickHandler();
 		
-		BasicGraphEditor editor =new BasicGraphEditor();
-		EditorToolBar toolbar = new EditorToolBar(editor, 1);	// 初始化工具栏
+//		BasicGraphEditor editor =new BasicGraphEditor();
+//		EditorToolBar toolbar = new EditorToolBar(editor, 1);	// 初始化工具栏
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		Container pane = frame.getContentPane();
-		pane.add(toolbar, BorderLayout.NORTH);
+//		Container pane = frame.getContentPane();
+//		pane.add(toolbar, BorderLayout.NORTH);
 		frame.setSize(400, 320);
 		frame.setVisible(true);
 	}

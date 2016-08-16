@@ -67,28 +67,28 @@ public class EditorToolBar extends JToolBar
 		addSeparator();
 
 		add(editor.bind("Print", new PrintAction(),
-				"/com/mxgraph/examples/swing/images/print.gif"));
+				"/example/com/mxgraph/examples/swing/images/print.gif"));
 
 		addSeparator();
 
 		add(editor.bind("Cut", TransferHandler.getCutAction(),
-				"/com/mxgraph/examples/swing/images/cut.gif"));
+				"/example/com/mxgraph/examples/swing/images/cut.gif"));
 		add(editor.bind("Copy", TransferHandler.getCopyAction(),
-				"/com/mxgraph/examples/swing/images/copy.gif"));
+				"/example/com/mxgraph/examples/swing/images/copy.gif"));
 		add(editor.bind("Paste", TransferHandler.getPasteAction(),
-				"/com/mxgraph/examples/swing/images/paste.gif"));
+				"/example/com/mxgraph/examples/swing/images/paste.gif"));
 
 		addSeparator();
 
 		add(editor.bind("Delete", mxGraphActions.getDeleteAction(),
-				"/com/mxgraph/examples/swing/images/delete.gif"));
+				"/example/com/mxgraph/examples/swing/images/delete.gif"));
 
 		addSeparator();
 
 		add(editor.bind("Undo", new HistoryAction(true),
-				"/com/mxgraph/examples/swing/images/undo.gif"));
+				"/example/com/mxgraph/examples/swing/images/undo.gif"));
 		add(editor.bind("Redo", new HistoryAction(false),
-				"/com/mxgraph/examples/swing/images/redo.gif"));
+				"/example/com/mxgraph/examples/swing/images/redo.gif"));
 
 		addSeparator();
 
