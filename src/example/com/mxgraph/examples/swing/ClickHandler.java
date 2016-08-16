@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.view.mxGraph;
 
+import example.com.mxgraph.examples.swing.editor.BasicGraphEditor;
 import example.com.mxgraph.examples.swing.editor.EditorToolBar;
 
 public class ClickHandler extends JFrame
@@ -40,6 +41,9 @@ public class ClickHandler extends JFrame
 		}
 		
 		final mxGraphComponent graphComponent = new mxGraphComponent(graph);
+		BasicGraphEditor editor = new BasicGraphEditor("editor title", graphComponent);
+		EditorToolBar toolbar = new EditorToolBar(editor, 1);
+		
 		getContentPane().add(graphComponent);
 		
 		graphComponent.getGraphControl().addMouseListener(new MouseAdapter()
@@ -60,7 +64,9 @@ public class ClickHandler extends JFrame
 	public static void main(String[] args)
 	{
 		ClickHandler frame = new ClickHandler();
-		EditorToolBar toolbar = new EditorToolBar();
+		
+		BasicGraphEditor editor =new BasicGraphEditor();
+		EditorToolBar toolbar = new EditorToolBar(editor, 1);	// 初始化工具栏
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Container pane = frame.getContentPane();
 		pane.add(toolbar, BorderLayout.NORTH);
